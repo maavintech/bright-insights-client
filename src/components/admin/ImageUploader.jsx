@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import api from '../../api/client';
-
-const API_ORIGIN = (import.meta.env.VITE_API_URL || 'http://localhost:5001/api').replace(/\/api\/?$/, '');
+import api, { API_ORIGIN } from '../../api/client';
 
 export default function ImageUploader({ value, onChange }) {
   const [uploading, setUploading] = useState(false);
