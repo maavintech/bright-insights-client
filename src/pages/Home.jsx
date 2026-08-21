@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../api/client';
 import HeroSlideshow from '../components/HeroSlideshow';
 import PostCard, { PostRow } from '../components/PostCard';
+import PollWidget from '../components/PollWidget';
 import { getCategoryMeta } from '../lib/categoryMeta';
 import { useSiteSettings } from '../context/SiteSettingsContext';
 
@@ -49,8 +50,8 @@ export default function Home() {
       {layout === 'classifieds' ? (
         <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
           <div className="flex flex-col gap-8 lg:flex-row">
-            <aside className="lg:w-72 lg:shrink-0">
-              <div className="card-shadow sticky top-24 rounded-2xl border border-brand-ink/[0.06] bg-white p-6">
+            <aside className="space-y-5 lg:w-72 lg:shrink-0">
+              <div className="card-shadow rounded-2xl border border-brand-ink/[0.06] bg-white p-6">
                 <h2 className="text-xs font-extrabold uppercase tracking-widest text-brand-ink/50">
                   Categories
                 </h2>
@@ -79,6 +80,8 @@ export default function Home() {
                   Browse All
                 </Link>
               </div>
+
+              <PollWidget />
             </aside>
 
             <div className="min-w-0 flex-1">
@@ -147,6 +150,8 @@ export default function Home() {
                 ))}
               </div>
             )}
+
+            <PollWidget className="mt-12 mx-auto max-w-xl" />
           </section>
         </>
       )}

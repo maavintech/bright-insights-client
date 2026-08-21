@@ -24,6 +24,20 @@ export default function AdminLayout() {
           <NavLink to="/admin" end className={linkClass}>Dashboard</NavLink>
           <NavLink to="/admin/categories" className={linkClass}>Categories</NavLink>
           <NavLink to="/admin/posts" className={linkClass}>Posts</NavLink>
+
+          <p className="px-4 pb-1 pt-4 text-[10px] font-extrabold uppercase tracking-widest text-brand-ink/35">
+            Engagement
+          </p>
+          <NavLink to="/admin/daily-tips" className={linkClass}>Thought / Hack</NavLink>
+          <NavLink to="/admin/polls" className={linkClass}>Polls</NavLink>
+          <NavLink to="/admin/subscribers" className={linkClass}>Subscribers</NavLink>
+
+          <p className="px-4 pb-1 pt-4 text-[10px] font-extrabold uppercase tracking-widest text-brand-ink/35">
+            Content
+          </p>
+          <NavLink to="/admin/resources" className={linkClass}>Downloads</NavLink>
+          <NavLink to="/admin/videos" className={linkClass}>Videos</NavLink>
+          <NavLink to="/admin/settings" className={linkClass}>Settings</NavLink>
         </nav>
         <div className="mt-8 border-t border-brand-ink/10 pt-4 px-2">
           <p className="truncate text-xs text-brand-ink/50">{admin?.email}</p>
